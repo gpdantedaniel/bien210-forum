@@ -108,7 +108,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center gap-5 p-2">
       <h2 className="font-bold">Students who have asked questions</h2>
-      <div className="bg-gray-200 p-4 rounded-md min-w-0.5">
+      <div className="bg-gray-200 p-4 rounded-md min-w-0.5 text-black">
         {students.map((s) => (
           <div key={s.id} className="flex flex-row items justify-between gap-5">
             <div>{s.name}</div>
@@ -132,7 +132,7 @@ export default function Home() {
             key={q.id}
           >
             <div className="text-lg text-black">{q.question}</div>
-            <div className="text-sm">
+            <div className="text-sm text-black">
               <strong>
                 {q.name}
                 {studentNames.includes(q.name) && (
