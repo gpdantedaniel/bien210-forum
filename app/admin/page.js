@@ -100,6 +100,11 @@ export default function Home() {
     // await supabase.from("students").delete().in("id", student_ids);
   };
 
+  const dismissQuestion = async (id) => {
+    await supabase.from("questions").delete().eq("id", id);
+    setQuestions((prev) => prev.filter((q) => q.id !== id));
+  };
+
   return (
     <div className="w-screen h-screen flex flex-col items-center justify-center gap-5 p-2">
       <h2 className="font-bold">Students who have asked questions</h2>
@@ -144,16 +149,18 @@ export default function Home() {
               </strong>
             </div>
 
-            <p>
-              {
-                <button
-                  className="px-3 py-1 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-green-300 transition ease-in-out duration-300"
-                  onClick={() => handleDeleteQuestion(q.id, q.name)}
-                >
-                  Dismiss as answered
-                </button>
-              }
-            </p>
+            <button
+              className="px-3 py-1 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-400 focus:outline-none focus:ring-2 focus:ring-green-300 transition ease-in-out duration-300"
+              onClick={() => handleDeleteQuestion(q.id, q.name)}
+            >
+              Add point & dismiss
+            </button>
+            <button
+              className="px-3 py-1 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-green-300 transition ease-in-out duration-300"
+              onClick={() => dismissQuestion(q.id, q.name)}
+            >
+              Dismiss
+            </button>
           </div>
         ))}
       </div>
