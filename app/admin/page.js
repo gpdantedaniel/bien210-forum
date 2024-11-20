@@ -106,7 +106,7 @@ export default function Home() {
   };
 
   return (
-    <div className="w-screen h-screen flex flex-col items-center justify-center gap-5 p-2">
+    <div className="flex flex-col items-center justify-center gap-5 p-2">
       <h2 className="font-bold">Students who have asked questions</h2>
       <div className="bg-gray-200 p-4 rounded-md min-w-0.5">
         {students.map((s) => (

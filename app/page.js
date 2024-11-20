@@ -17,7 +17,7 @@ export default function Home() {
   };
 
   return (
-    <div className="w-screen h-screen flex flex-col items-center justify-center gap-5">
+    <div className="w-screen h-screen flex flex-col overflow-y-scroll items-center justify-center gap-5 p-10">
       <Image
         src="/bioeng.png"
         alt="The best engineering major at McGill"

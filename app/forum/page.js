@@ -64,7 +64,7 @@ export default function Forum() {
 
   if (name) {
     return (
-      <div className="w-screen h-screen flex flex-col items-center justify-center gap-5">
+      <div className="w-100 box-border flex flex-col overflow-y-scroll  items-center justify-center gap-5 p-5">
         <h1 className="text-2xl font-bold">BIEN 210 Presentations Forum</h1>
 
         <input
