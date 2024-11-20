@@ -87,7 +87,7 @@ export default function Forum() {
               className="border-2 flex flex-col gap-2 align bg-gray-50 border-gray-300 p-4 rounded w-full"
               key={q.id}
             >
-              <div className="text-lg">{q.question}</div>
+              <div className="text-lg text-black">{q.question}</div>
               <div className="text-sm">
                 <strong>{q.name}</strong>
               </div>
