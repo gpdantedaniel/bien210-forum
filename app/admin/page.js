@@ -146,7 +146,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex sm:flex-row flex-col justify-center gap-5 p-6 bg-white">
+    <div className="flex sm:flex-row flex-col justify-center gap-5 p-6 bg-white text-black">
       <div className="w-100 flex flex-col gap-2">
         <h1 className="text-2xl font-bold">Admin Panel</h1>
         <button
